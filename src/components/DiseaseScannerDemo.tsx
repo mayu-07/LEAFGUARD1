@@ -70,9 +70,9 @@ export const DiseaseScannerDemo = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Upload Section */}
-            <Card className="h-fit">
+            <Card className="h-fit sticky top-4">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Camera className="h-5 w-5 text-primary" />
@@ -123,7 +123,7 @@ export const DiseaseScannerDemo = () => {
             </Card>
 
             {/* Results Section */}
-            <Card className="h-fit">
+            <Card className="h-fit sticky top-4">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-success" />

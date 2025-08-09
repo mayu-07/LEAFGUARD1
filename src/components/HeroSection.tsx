@@ -5,7 +5,7 @@ import heroImage from '@/assets/hero-agriculture.jpg';
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -14,10 +14,10 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 relative z-10 py-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-10rem)]">
           {/* Content */}
-          <div className="text-white animate-fade-in-up">
+          <div className="text-white animate-fade-in-up flex flex-col justify-center">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               आपकी फसल का
               <span className="block text-accent">AI डॉक्टर</span>
@@ -59,7 +59,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Quick Scan Demo */}
-          <div className="animate-scale-in">
+          <div className="animate-scale-in flex items-center justify-center">
             <Card className="p-8 bg-white/10 backdrop-blur-lg border-white/20">
               <div className="text-center mb-6">
                 <div className="inline-flex p-4 rounded-full bg-gradient-accent mb-4">

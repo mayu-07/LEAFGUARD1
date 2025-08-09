@@ -37,7 +37,7 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
         {/* Main Footer Content */}
-        <div className="grid lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid lg:grid-cols-4 gap-8 mb-12 items-start">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
@@ -74,7 +74,7 @@ export const Footer = () => {
 
           {/* Footer Links */}
           {footerSections.map((section) => (
-            <div key={section.title}>
+            <div key={section.title} className="flex flex-col">
               <h4 className="text-lg font-semibold mb-6">{section.title}</h4>
               <ul className="space-y-3">
                 {section.links.map((link) => (
@@ -95,7 +95,7 @@ export const Footer = () => {
         <Separator className="bg-primary-foreground/20 mb-8" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <span className="text-sm text-primary-foreground/80">हमसे जुड़ें:</span>
@@ -116,7 +116,7 @@ export const Footer = () => {
           </div>
 
           {/* Copyright & Links */}
-          <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-primary-foreground/80">
+          <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-primary-foreground/80 order-2 md:order-1">
             <span>© 2024 हरित सहायक. सभी अधिकार सुरक्षित।</span>
             <div className="flex gap-4">
               <a href="#privacy" className="hover:text-accent transition-colors">गोपनीयता नीति</a>

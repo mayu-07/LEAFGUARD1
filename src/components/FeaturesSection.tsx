@@ -88,12 +88,12 @@ export const FeaturesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 items-stretch">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card key={index} className="hover:shadow-medium transition-all duration-300 hover:-translate-y-2 group">
-                <CardHeader>
+              <Card key={index} className="hover:shadow-medium transition-all duration-300 hover:-translate-y-2 group h-full flex flex-col">
+                <CardHeader className="flex-1">
                   <div className={`inline-flex p-3 rounded-lg ${feature.color} text-white w-fit mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon className="h-6 w-6" />
                   </div>
@@ -108,14 +108,14 @@ export const FeaturesSection = () => {
         </div>
 
         {/* How it Works */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col justify-center">
             <h3 className="text-3xl font-bold text-foreground mb-8">
               कैसे काम करता है?
             </h3>
 
             {processSteps.map((step, index) => (
-              <div key={index} className="flex gap-4 mb-8 group">
+              <div key={index} className="flex gap-4 mb-8 group items-start">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full bg-gradient-accent flex items-center justify-center text-white font-bold">
                     {step.step}
