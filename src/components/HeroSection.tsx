@@ -1,5 +1,5 @@
 import { Camera, Upload, Scan, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { EnhancedButton } from '@/components/ui/enhanced-button';
 import { Card } from '@/components/ui/card';
 import heroImage from '@/assets/hero-agriculture.jpg';
 
@@ -29,16 +29,26 @@ export const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="hero" size="xl" className="group">
+              <EnhancedButton 
+                variant="hero" 
+                size="xl" 
+                className="group"
+                trackingAction="hero_start_diagnosis"
+              >
                 <Camera className="h-5 w-5 mr-2" />
                 अभी निदान करें
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              </EnhancedButton>
               
-              <Button variant="outline" size="xl" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
+              <EnhancedButton 
+                variant="outline" 
+                size="xl" 
+                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+                trackingAction="hero_upload_photo"
+              >
                 <Upload className="h-5 w-5 mr-2" />
                 फोटो अपलोड करें
-              </Button>
+              </EnhancedButton>
             </div>
 
             {/* Quick Stats */}
@@ -75,9 +85,13 @@ export const HeroSection = () => {
                 <p className="text-sm text-white/60">JPG, PNG, GIF - अधिकतम 10MB</p>
               </div>
 
-              <Button variant="hero" className="w-full mt-6">
+              <EnhancedButton 
+                variant="hero" 
+                className="w-full mt-6"
+                trackingAction="hero_ai_analysis_start"
+              >
                 कृत्रिम बुद्धि विश्लेषण शुरू करें
-              </Button>
+              </EnhancedButton>
             </Card>
           </div>
         </div>

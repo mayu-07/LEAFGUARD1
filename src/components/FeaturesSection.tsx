@@ -13,7 +13,7 @@ import {
   Clock
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { EnhancedButton } from '@/components/ui/enhanced-button';
 import aiAnalysisImage from '@/assets/ai-analysis.jpg';
 import mobileScanImage from '@/assets/mobile-scan.jpg';
 
@@ -132,10 +132,15 @@ export const FeaturesSection = () => {
               </div>
             ))}
 
-            <Button variant="hero" size="lg" className="mt-6">
+            <EnhancedButton 
+              variant="hero" 
+              size="lg" 
+              className="mt-6"
+              trackingAction="features_try_now"
+            >
               <Camera className="h-5 w-5 mr-2" />
               अब कोशिश करें
-            </Button>
+            </EnhancedButton>
           </div>
 
           <div className="space-y-6">

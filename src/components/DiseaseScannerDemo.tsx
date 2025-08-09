@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Upload, Camera, Loader2, CheckCircle, AlertTriangle, Info } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { EnhancedButton } from '@/components/ui/enhanced-button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import { TreatmentRecommendationButton } from './TreatmentRecommendationButton';
 
 export const DiseaseScannerDemo = () => {
   const [isScanning, setIsScanning] = useState(false);
@@ -90,24 +91,18 @@ export const DiseaseScannerDemo = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <Button 
+                  <EnhancedButton 
                     variant="hero" 
                     className="w-full" 
                     onClick={startScan}
                     disabled={isScanning}
+                    loading={isScanning}
+                    loadingText="कृत्रिम बुद्धि विश्लेषण जारी है..."
+                    trackingAction="demo_scan_start"
                   >
-                    {isScanning ? (
-                      <>
-                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                        कृत्रिम बुद्धि विश्लेषण जारी है...
-                      </>
-                    ) : (
-                      <>
-                        <Camera className="h-4 w-4 mr-2" />
-                        प्रदर्शन निदान शुरू करें
-                      </>
-                    )}
-                  </Button>
+                    <Camera className="h-4 w-4 mr-2" />
+                    प्रदर्शन निदान शुरू करें
+                  </EnhancedButton>
 
                   {isScanning && (
                     <div className="space-y-2">
@@ -195,9 +190,29 @@ export const DiseaseScannerDemo = () => {
                       </ul>
                     </div>
 
-                    <Button variant="outline" className="w-full">
-                      विस्तृत रिपोर्ट डाउनलोड करें
-                    </Button>
+                    <TreatmentRecommendationButton 
+                      treatmentData={{
+                        disease: mockAnalysis.disease,
+                        confidence: mockAnalysis.confidence,
+                        severity: mockAnalysis.severity as 'कम' | 'मध्यम' | 'अधिक',
+                        cropType: mockAnalysis.cropType,
+                        affectedArea: mockAnalysis.affectedArea,
+                        recommendations: mockAnalysis.recommendations,
+                        prevention: mockAnalysis.prevention,
+                        medicines: [
+                          {
+                            name: 'कॉपर सल्फेट',
+                            dosage: '2 ग्राम प्रति लीटर',
+                            frequency: 'सप्ताह में 2 बार'
+                          },
+                          {
+                            name: 'स्ट्रेप्टोमाइसिन',
+                            dosage: '1 ग्राम प्रति लीटर',
+                            frequency: '15 दिन में एक बार'
+                          }
+                        ]
+                      }}
+                    />
                   </div>
                 )}
               </CardContent>

@@ -1,7 +1,7 @@
 import { Leaf, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { LanguageSwitcher } from './LanguageSwitcher';
+import { EnhancedButton } from '@/components/ui/enhanced-button';
+import { EnhancedLanguageSwitcher } from './EnhancedLanguageSwitcher';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,22 +43,28 @@ export const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <LanguageSwitcher />
-            <Button variant="hero" size="sm">
+            <EnhancedLanguageSwitcher />
+            <EnhancedButton 
+              variant="hero" 
+              size="sm"
+              trackingAction="header_start_diagnosis"
+            >
               रोग निदान शुरू करें
-            </Button>
+            </EnhancedButton>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <LanguageSwitcher />
-            <Button
+            <EnhancedLanguageSwitcher />
+            <EnhancedButton
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              trackingAction="mobile_menu_toggle"
+              aria-label={isMenuOpen ? 'मेन्यू बंद करें' : 'मेन्यू खोलें'}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
+            </EnhancedButton>
           </div>
         </div>
 
@@ -76,9 +82,14 @@ export const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="mt-2">
+              <EnhancedButton 
+                variant="hero" 
+                size="sm" 
+                className="mt-2"
+                trackingAction="mobile_start_diagnosis"
+              >
                 रोग निदान शुरू करें
-              </Button>
+              </EnhancedButton>
             </nav>
           </div>
         )}

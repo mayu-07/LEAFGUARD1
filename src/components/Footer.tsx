@@ -1,5 +1,5 @@
 import { Leaf, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { EnhancedButton } from '@/components/ui/enhanced-button';
 import { Separator } from '@/components/ui/separator';
 
 export const Footer = () => {
@@ -100,18 +100,42 @@ export const Footer = () => {
           <div className="flex items-center gap-4">
             <span className="text-sm text-primary-foreground/80">हमसे जुड़ें:</span>
             <div className="flex gap-2">
-              <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
+              <EnhancedButton 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10"
+                trackingAction="footer_facebook"
+                aria-label="फेसबुक पर फॉलो करें"
+              >
                 <Facebook className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
+              </EnhancedButton>
+              <EnhancedButton 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10"
+                trackingAction="footer_twitter"
+                aria-label="ट्विटर पर फॉलो करें"
+              >
                 <Twitter className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
+              </EnhancedButton>
+              <EnhancedButton 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10"
+                trackingAction="footer_instagram"
+                aria-label="इंस्टाग्राम पर फॉलो करें"
+              >
                 <Instagram className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
+              </EnhancedButton>
+              <EnhancedButton 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10"
+                trackingAction="footer_youtube"
+                aria-label="यूट्यूब पर सब्सक्राइब करें"
+              >
                 <Youtube className="h-4 w-4" />
-              </Button>
+              </EnhancedButton>
             </div>
           </div>
 
