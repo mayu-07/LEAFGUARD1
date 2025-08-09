@@ -32,12 +32,16 @@ export const LanguageSwitcher = () => {
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+      <DropdownMenuContent 
+        align="end" 
+        className="w-48 bg-background border border-border shadow-medium z-50"
+        sideOffset={5}
+      >
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => setSelectedLang(lang)}
-            className="flex items-center gap-3 cursor-pointer"
+            className="flex items-center gap-3 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
           >
             <span className="text-lg">{lang.flag}</span>
             <span className="font-medium">{lang.name}</span>
