@@ -7,8 +7,8 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'होम', href: '#home' },
-    { name: 'फीचर्स', href: '#features' },
+    { name: 'मुख्य पृष्ठ', href: '#home' },
+    { name: 'सुविधाएं', href: '#features' },
     { name: 'कैसे काम करता है', href: '#how-it-works' },
     { name: 'संपर्क', href: '#contact' },
   ];
@@ -24,7 +24,7 @@ export const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">हरित सहायक</h1>
-              <p className="text-xs text-muted-foreground">AI Crop Assistant</p>
+              <p className="text-xs text-muted-foreground">कृषि AI सहायक</p>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export const Header = () => {
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
             <Button variant="hero" size="sm">
-              स्कैन शुरू करें
+              रोग निदान शुरू करें
             </Button>
           </div>
 
@@ -77,7 +77,7 @@ export const Header = () => {
                 </a>
               ))}
               <Button variant="hero" size="sm" className="mt-2">
-                स्कैन शुरू करें
+                रोग निदान शुरू करें
               </Button>
             </nav>
           </div>

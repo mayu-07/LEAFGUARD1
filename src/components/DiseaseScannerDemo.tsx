@@ -62,10 +62,10 @@ export const DiseaseScannerDemo = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            AI स्कैनर डेमो
+            कृत्रिम बुद्धि निदान प्रदर्शन
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            देखिए कैसे हमारा AI आपकी फसल की बीमारी को पहचानता है
+            देखिए कैसे हमारी कृत्रिम बुद्धि आपकी फसल की बीमारी को पहचानती है
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export const DiseaseScannerDemo = () => {
                   फोटो अपलोड करें
                 </CardTitle>
                 <CardDescription>
-                  अपनी फसल की तस्वीर अपलोड करें या डेमो के लिए नीचे बटन दबाएं
+                  अपनी फसल की तस्वीर अपलोड करें या प्रदर्शन के लिए नीचे बटन दबाएं
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -99,12 +99,12 @@ export const DiseaseScannerDemo = () => {
                     {isScanning ? (
                       <>
                         <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                        AI विश्लेषण जारी है...
+                        कृत्रिम बुद्धि विश्लेषण जारी है...
                       </>
                     ) : (
                       <>
                         <Camera className="h-4 w-4 mr-2" />
-                        डेमो स्कैन शुरू करें
+                        प्रदर्शन निदान शुरू करें
                       </>
                     )}
                   </Button>
@@ -112,7 +112,7 @@ export const DiseaseScannerDemo = () => {
                   {isScanning && (
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span>प्रोसेसिंग...</span>
+                        <span>संसाधन जारी है...</span>
                         <span>{scanProgress}%</span>
                       </div>
                       <Progress value={scanProgress} className="h-2" />
@@ -134,7 +134,7 @@ export const DiseaseScannerDemo = () => {
                 {!scanComplete ? (
                   <div className="text-center py-12 text-muted-foreground">
                     <Info className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                    <p>स्कैन शुरू करने के लिए बाएं तरफ डेमो बटन दबाएं</p>
+                    <p>निदान शुरू करने के लिए बाएं तरफ प्रदर्शन बटन दबाएं</p>
                   </div>
                 ) : (
                   <div className="space-y-6 animate-fade-in-up">

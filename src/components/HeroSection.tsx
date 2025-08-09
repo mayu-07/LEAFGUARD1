@@ -20,18 +20,18 @@ export const HeroSection = () => {
           <div className="text-white animate-fade-in-up flex flex-col justify-center">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               आपकी फसल का
-              <span className="block text-accent">AI डॉक्टर</span>
+              <span className="block text-accent">कृत्रिम बुद्धि डॉक्टर</span>
             </h2>
             
             <p className="text-xl mb-8 text-gray-200 leading-relaxed">
-              फोटो खींचिए, बीमारी पहचानिए, इलाज पाइए। भारत का पहला AI-powered 
-              फसल रोग निदान प्लेटफॉर्म - 12 भाषाओं में उपलब्ध।
+              फोटो खींचिए, बीमारी पहचानिए, इलाज पाइए। भारत का पहला कृत्रिम बुद्धि से संचालित 
+              फसल रोग निदान मंच - 12 भारतीय भाषाओं में उपलब्ध।
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button variant="hero" size="xl" className="group">
                 <Camera className="h-5 w-5 mr-2" />
-                अभी स्कैन करें
+                अभी निदान करें
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -65,8 +65,8 @@ export const HeroSection = () => {
                 <div className="inline-flex p-4 rounded-full bg-gradient-accent mb-4">
                   <Scan className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">त्वरित स्कैन</h3>
-                <p className="text-gray-300">अपनी फसल की तस्वीर अपलोड करें या कैमरा से स्कैन करें</p>
+                <h3 className="text-2xl font-bold text-white mb-2">त्वरित निदान</h3>
+                <p className="text-gray-300">अपनी फसल की तस्वीर अपलोड करें या कैमरा से जांच करें</p>
               </div>
 
               <div className="border-2 border-dashed border-white/30 rounded-lg p-8 text-center hover:border-accent transition-colors cursor-pointer">
@@ -76,7 +76,7 @@ export const HeroSection = () => {
               </div>
 
               <Button variant="hero" className="w-full mt-6">
-                AI विश्लेषण शुरू करें
+                कृत्रिम बुद्धि विश्लेषण शुरू करें
               </Button>
             </Card>
           </div>

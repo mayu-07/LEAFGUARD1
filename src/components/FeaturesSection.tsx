@@ -21,7 +21,7 @@ export const FeaturesSection = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered विश्लेषण',
+      title: 'कृत्रिम बुद्धि विश्लेषण',
       description: '95% सटीकता के साथ 200+ बीमारियों की पहचान',
       color: 'bg-primary'
     },
@@ -39,13 +39,13 @@ export const FeaturesSection = () => {
     },
     {
       icon: Users,
-      title: 'Expert Connect',
+      title: 'विशेषज्ञ सेवा',
       description: 'कृषि विशेषज्ञों से सीधे बात करें',
       color: 'bg-warning'
     },
     {
       icon: ShoppingCart,
-      title: 'मार्केटप्लेस',
+      title: 'कृषि बाज़ार',
       description: 'दवाइयाँ, बीज, उपकरण - सब एक जगह',
       color: 'bg-destructive'
     },
@@ -65,8 +65,8 @@ export const FeaturesSection = () => {
     },
     {
       step: '02', 
-      title: 'AI विश्लेषण',
-      description: 'हमारा AI मॉडल बीमारी का विश्लेषण करता है'
+      title: 'कृत्रिम बुद्धि विश्लेषण',
+      description: 'हमारा कृत्रिम बुद्धि मॉडल बीमारी का विश्लेषण करता है'
     },
     {
       step: '03',

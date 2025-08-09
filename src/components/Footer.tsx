@@ -5,30 +5,30 @@ import { Separator } from '@/components/ui/separator';
 export const Footer = () => {
   const footerSections = [
     {
-      title: 'प्लेटफॉर्म',
+      title: 'मंच सुविधाएं',
       links: [
-        { name: 'AI स्कैनर', href: '#scanner' },
-        { name: 'Expert Connect', href: '#experts' },
-        { name: 'मार्केटप्लेस', href: '#marketplace' },
+        { name: 'कृत्रिम बुद्धि निदान', href: '#scanner' },
+        { name: 'विशेषज्ञ सेवा', href: '#experts' },
+        { name: 'कृषि बाज़ार', href: '#marketplace' },
         { name: 'मौसम अपडेट', href: '#weather' }
       ]
     },
     {
-      title: 'सहायता',
+      title: 'सहायता केंद्र',
       links: [
-        { name: 'उपयोग गाइड', href: '#guide' },
-        { name: 'FAQ', href: '#faq' },
-        { name: 'वीडियो ट्यूटोरियल', href: '#tutorials' },
+        { name: 'उपयोग मार्गदर्शिका', href: '#guide' },
+        { name: 'सामान्य प्रश्न', href: '#faq' },
+        { name: 'वीडियो प्रशिक्षण', href: '#tutorials' },
         { name: 'तकनीकी सहायता', href: '#support' }
       ]
     },
     {
-      title: 'कंपनी',
+      title: 'संस्था जानकारी',
       links: [
         { name: 'हमारे बारे में', href: '#about' },
-        { name: 'करियर', href: '#careers' },
-        { name: 'समाचार', href: '#news' },
-        { name: 'पार्टनर्स', href: '#partners' }
+        { name: 'रोजगार अवसर', href: '#careers' },
+        { name: 'समाचार एवं घटनाएं', href: '#news' },
+        { name: 'साझेदार संस्थाएं', href: '#partners' }
       ]
     }
   ];
@@ -46,12 +46,12 @@ export const Footer = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">हरित सहायक</h3>
-                <p className="text-sm opacity-80">AI Crop Assistant</p>
+                <p className="text-sm opacity-80">कृषि कृत्रिम बुद्धि सहायक</p>
               </div>
             </div>
             
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              भारत का पहला AI-powered फसल रोग निदान प्लेटफॉर्म। 
+              भारत का पहला कृत्रिम बुद्धि से संचालित फसल रोग निदान मंच। 
               किसानों के लिए, किसानों के साथ।
             </p>
 
